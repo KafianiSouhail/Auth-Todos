@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "type": "personal",
+        "icon": "assets/images/todos/person-type.jpeg",
+        "title": "todos.add.titles.personal"
+    },
+    {
+        "id": 2,
+        "type": "familly",
+        "icon": "assets/images/todos/familly-type.png",
+        "title": "todos.add.titles.familly"
+    },
+    {
+        "id": 3,
+        "type": "work",
+        "icon": "assets/images/todos/work-type.png",
+        "title": "todos.add.titles.work"
+    }
+]

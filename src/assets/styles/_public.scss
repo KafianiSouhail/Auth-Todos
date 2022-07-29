@@ -1,0 +1,20 @@
+
+// Snack bar success
+snack-bar-container.snackbar-success{
+    background-color:dodgerblue !important;
+   
+}
+  
+snack-bar-container.snackbar-success .mat-simple-snackbar {
+    color: #FFF !important;
+}
+
+// Snack bar failed
+snack-bar-container.snackbar-failed{
+    background-color:brown !important;
+   
+}
+  
+snack-bar-container.snackbar-failed .mat-simple-snackbar {
+    color: #FFF !important;
+}

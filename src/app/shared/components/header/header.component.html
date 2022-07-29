@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="header" fxLayout="row" fxLayoutAlign="space-between center">
+    <span fxFlex="20" class="header-title"> {{ 'shared.titles.app-title' | translate }} </span>
+    <div class="header-buttons" fxFlex="40" fxLayout="row" fxLayoutAlign="space-evenly center">
+       <div class="no-auth" fxFlex="100" fxLayout=" row" fxLayoutAlign="space-evenly center"
+       *ngIf="!isLoggedIn">
+            <a mat-raised-button color="accent" 
+            [routerLink]="['/',myRoutes.AUTH,myRoutes.SIGNIN]"> 
+                {{ 'shared.actions.sign-in'| translate }} 
+            </a>
+            <a mat-raised-button color="accent" [routerLink]="['/'+myRoutes.AUTH,myRoutes.SIGNUP]"> 
+                {{ 'shared.actions.sign-up'| translate }} 
+            </a>
+            <a mat-raised-button color="accent" [routerLink]="['/'+myRoutes.HOME]"> 
+                {{ 'shared.actions.home'| translate }} 
+            </a>
+       </div>
+       <div class="auth" fxFlex="100" fxLayout=" row" fxLayoutAlign="space-evenly center"
+       *ngIf="isLoggedIn">
+        <a mat-raised-button color="accent" [routerLink]="['/'+myRoutes.HOME]" (click)="onLogout()">
+            {{ 'shared.actions.logout'| translate }} 
+        </a>
+        <a mat-raised-button color="accent" [routerLink]="['/'+myRoutes.TODOS]">
+            {{ 'shared.actions.todos'| translate }} 
+        </a>
+        
+        <a mat-raised-button color="accent" [routerLink]="['/',myRoutes.TODOS,myRoutes.ADD]">
+            {{ 'todos.actions.add'| translate }}  
+        </a>
+       </div>
+        
+        <mat-form-field appearance="fill">
+            <mat-select [(ngModel)]="selectedLanguage" (valueChange)="onLanguageChange(langSelect.value)" #langSelect>
+              <mat-option [value]="language.shortName" *ngFor="let language of languages">
+                {{ language.name| translate }}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-toolbar>

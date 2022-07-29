@@ -1,0 +1,75 @@
+{
+    "shared":{
+        "fields":{
+            "email": "E-mail",
+            "password": "Password",
+            "confirm-password": "Confirm password",
+            "search": "Search"
+        },
+        "titles":{
+            "app-title": "MyApp",
+            "title": "Title"
+        },
+        "actions":{
+            "sign-in": "Sign in",
+            "sign-up": "Sign up",
+            "logout": "Logout",
+            "next": "Next",
+            "back": "Back",
+            "edit": "Edit",
+            "home": "Home",
+            "todos": "Todos"
+        },
+        "errors":{
+            "required": "This field is required",
+            "minlength": "Min length is {{requiredLength}}",
+            "email": "Please enter a valid email",
+            "password":"Password form is incorrect"
+        }
+    },
+    "auth":{
+        "sign-in":{
+        },
+        "sign-up":{
+            "fields": {
+                "first-name": "First name",
+                "last-name": "Last name"
+            },
+            "actions":{
+                "sign-up":"Sign up"
+            }
+        },
+        "errors": {
+            "notSamePasswords": "Passwords don't match"
+        },
+        "notifications":{
+            "auth-success": "You are succefully authenticated",
+            "sign-in-failed": "Failed to authenticate, password or username is wrong",
+            "sign-up-failed": "Failed to signup"
+        }
+    },
+    "todos": {
+        "add": {
+            "titles": {
+                "personal": "Personal",
+                "work": "Work",
+                "familly": "Familly",
+                "choose-todo-type": "Choose your todo type",
+                "create-content": "Create content"
+            },
+            "fields": {
+               "content": "Content" 
+            }
+        },
+        "actions":{
+            "add": "Add new todo"
+        },
+        "notifications":{
+            "add-todo-success": "Todo added succefully"
+        }
+    },
+    "languages": {
+        "en": "English",
+        "fr": "Frensh"
+    }
+}

@@ -1,0 +1,43 @@
+<section class="signup" fxLayout="column" fxLayoutAlign="center center">
+    <form fxLayout=" column" fxLayoutAlign="space-evenly center"
+    [formGroup]="signupForm" (ngSubmit)="onSignup()" class="signup-form" fxFlex="50">
+        <mat-form-field class="signup-form-field" appearance="fill" fxFlex="100">
+            <mat-label> {{ 'auth.sign-up.fields.first-name' | translate}} </mat-label>
+            <input type="text" matInput formControlName="firstName">
+            <mat-error>
+                {{ signupForm.controls['firstName'].value | error: signupForm.controls['firstName']}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="signup-form-field" appearance="fill" fxFlex="100">
+            <mat-label> {{ 'auth.sign-up.fields.last-name' | translate}} </mat-label>
+            <input type="text" matInput formControlName="lastName">
+            <mat-error>
+                {{ signupForm.controls['lastName'].value | error: signupForm.controls['lastName']}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="signup-form-field" appearance="fill" fxFlex="100">
+            <mat-label> {{ 'shared.fields.email' | translate }} </mat-label>
+            <input type="email" matInput formControlName="email">
+            <mat-error>
+                {{ signupForm.controls['email'].value | error: signupForm.controls['email']}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="signup-form-field" appearance="fill" fxFlex="100">
+            <mat-label> {{ 'shared.fields.password' | translate }} </mat-label>
+            <input type="password" matInput formControlName="password">
+            <mat-error>
+                {{ signupForm.controls['password'].value | error: signupForm.controls['password']}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="signup-form-field" appearance="fill" fxFlex="100">
+            <mat-label> {{ 'shared.fields.confirm-password' | translate }} </mat-label>
+            <input type="password" matInput formControlName="confirmPassword">
+            <mat-error>
+                {{ signupForm.controls['confirmPassword'].value | error: signupForm.controls['confirmPassword']: signupForm.value}}
+            </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="accent" fxFlex="20">
+            {{ 'auth.sign-up.actions.sign-up' | translate }}
+        </button>
+    </form>
+</section>

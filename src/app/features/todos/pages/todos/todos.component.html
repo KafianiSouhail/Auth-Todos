@@ -1,0 +1,26 @@
+<div class="filter-container">
+    <app-filter (onUserEntersValue)="onSearch($event)" class="filter-cmp"></app-filter>
+</div>
+<section class="todos" *ngIf="!isLoadingTodos">
+        <div class="container">
+            <div class="todos_card" *ngFor="let todo of (todos$ | async)">
+                <p class='todos_card_container_subtitle'> {{ todo.type }} </p>
+                <p class='todos_card_container_title'> {{ todo.title }}  </p>
+                <div>
+                  <p class='todos_card_container_content'> {{ todo.content }} </p>
+                </div>
+                <div>
+                    <button mat-raised-button color="accent">
+                        {{ 'shared.actions.edit' | translate }}
+                    </button>
+                </div>
+            </div>
+        </div>
+</section>
+
+<div class="paginator" [hidden]="isLoadingTodos">
+    <app-paginator [length]="(length$ | async) || 0" [pageSizeOptions]="[10,25,50]" 
+    (onPageChange)="onPaginationParamsChange($event)">
+    </app-paginator>
+</div>
+<app-skelton-todo *ngIf="isLoadingTodos"></app-skelton-todo>

@@ -1,0 +1,75 @@
+{
+    "shared":{
+        "fields":{
+            "email": "E-mail",
+            "password": "Mot de passe",
+            "confirm-password": "Confirmer le mot de passe",
+            "search": "Rechercher"
+        },
+        "titles":{
+            "app-title": "My App",
+            "title": "Titre"
+        },
+        "actions":{
+            "sign-in": "Se connecter",
+            "sign-up": "Creer un compte",
+            "logout": "Se deconnecter",
+            "next": "Suivant",
+            "back": "Precedent",
+            "edit": "Modifier",
+            "home": "Home",
+            "todos": "Todos"
+        },
+        "errors":{
+            "required": "Ce champs est requis",
+            "minlength": "la longeur minimale est {{requiredLength}}",
+            "email": "Veuillez entrer un email valide",
+            "password":"Le formulaire du mot de passe est incorrect"
+        }
+    },
+    "auth":{
+        "sign-in":{
+        },
+        "sign-up":{
+            "fields": {
+                "first-name": "Prenom",
+                "last-name": "Nom"
+            },
+            "actions":{
+            }
+        },
+        "errors": {
+            "notSamePasswords": "Les mots de passe ne correspondent pas"
+        },
+        "notifications":{
+            "auth-success": "Vous ete maintenant authentifie",
+            "sign-in-failed": "Échec de l'authentification, le mot de passe ou le nom d'utilisateur est incorrect",
+            "sign-up-failed": "Échec de l'inscription"
+        }
+    },
+    "todos":{
+        "add": {
+            "titles": {
+                "personal": "Personnel",
+                "work": "Travaill",
+                "familly": "Famille",
+                "choose-todo-type": "Choisissez votre type de todo",
+                "create-content": "Créer du contenu"
+            },
+            "fields": {
+               "content": "Contenu" 
+            }
+        },
+        "actions":{
+            "add": "Ajoute un nouveau todo"
+        },
+        "notifications":{
+            "add-todo-success": "Votre todo a bien ete ajoute"
+        }
+    },
+    "languages": {
+        "en": "Anglais",
+        "fr": "Francais"
+    }
+}
+

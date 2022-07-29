@@ -1,0 +1,19 @@
+<div class="todo-skelton">
+    <div class="todo-skelton_container" fxFlex="100" fxLayout="column" fxLayoutAlign="space-around center">
+        <ngx-skeleton-loader
+            [theme]="skeletonThemAllLine"
+            class="second-line"
+        >
+        </ngx-skeleton-loader>
+       <div class="first-line" fxFlex="100" fxLayout=" row" fxLayoutAlign="space-around center">
+        <ngx-skeleton-loader [theme]="skeletonTheme"></ngx-skeleton-loader>
+        <ngx-skeleton-loader [theme]="skeletonTheme"></ngx-skeleton-loader>
+        <ngx-skeleton-loader [theme]="skeletonTheme"></ngx-skeleton-loader>
+       </div>
+        <div class="first-line" fxFlex="100" fxLayout=" row" fxLayoutAlign="space-around center">
+            <ngx-skeleton-loader [theme]="skeletonTheme"></ngx-skeleton-loader>
+            <ngx-skeleton-loader [theme]="skeletonTheme"></ngx-skeleton-loader>
+            <ngx-skeleton-loader [theme]="skeletonTheme"></ngx-skeleton-loader>
+           </div>
+    </div>
+  </div>
